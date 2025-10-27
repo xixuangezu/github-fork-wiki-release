@@ -14,7 +14,7 @@ As is well known, forking a GitHub project does not include its wiki and release
 
 #### 2. Start Forking Wiki and Release Resources
 
-- Copy `.github` to your own forked repo and push -> Go to project page -> Actions tab -> I understand -> Sync Upstream Release and Wiki -> Run workflow
+- Copy `.github` to your own forked repo and push -> Go to project page -> Actions tab -> I understand -> Fork Release and Wiki -> Run workflow
 
 # Common Errors
 

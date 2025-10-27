@@ -14,7 +14,7 @@ github 快速 Fork 所有 wiki 和 release资源
 
 #### 2.开始 Fork wiki 和 release资源
 
-- 把.github复制到本人fork的仓库 并push -> 项目页顶部 -> Action -> I understand -> 同步上游 Release 与 Wiki -> run workflow
+- 把.github复制到本人fork的仓库 并push -> 项目页顶部 -> Action -> I understand -> Fork Release and Wiki -> run workflow
 
 
 # 常见错误
