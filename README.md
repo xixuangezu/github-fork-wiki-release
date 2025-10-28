@@ -16,6 +16,14 @@ As is well known, forking a GitHub project does not include its wiki and release
 
 - Copy `.github` to your own forked repo and push -> Go to project page -> Actions tab -> I understand -> Fork Release and Wiki -> Run workflow
 
+# Optional Settings
+
+#### Scheduling
+In fork-sync.yml, uncomment the schedule section.
+
+#### Only update the latest release
+In fork-sync.yml, set RELEASE_LIMIT.
+
 # Common Errors
 
 #####  ! [remote rejected]   6.33 -> 6.33 (refusing to allow a GitHub App to create or update workflow `.github/workflows/build.yml` without `workflows` permission)

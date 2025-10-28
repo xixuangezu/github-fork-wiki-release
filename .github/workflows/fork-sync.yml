@@ -2,8 +2,12 @@ name: Fork Release and Wiki
 
 on:
   workflow_dispatch:  # 手动触发，也可加 schedule 实现定时同步
+  # schedule: #定时1.5小时触发一次
+  # - cron: "0 0,3,6,9,12,15,18,21 * * *"    # 00:00/03:00/…/21:00 UTC
+  # - cron: "30 1,4,7,10,13,16,19,22 * * *"  # 01:30/04:30/…/22:30 UTC
 
 env:
+  RELEASE_LIMIT: 1000 # release同步的数量 最新的几个
   FORK_REPO: ${{ github.repository }}
   TEMP_DIR: ~/temp
 
@@ -74,7 +78,7 @@ jobs:
         RELEASE_SKIP=0
 
         # 遍历上游所有 Release 按 tag 名称同步
-        for tag in $(gh release list -R "$UPSTREAM_REPO" --limit 1000 --json tagName --jq '.[].tagName' | tac); do
+        for tag in $(gh release list -R "$UPSTREAM_REPO" --limit "$RELEASE_LIMIT" --json tagName --jq '.[].tagName' | tac); do
           # 跳过已有的 Release
           if gh release view -R $FORK_REPO $tag > /dev/null 2>&1; then
             echo "跳过已存在 Release: $tag"

@@ -16,6 +16,13 @@ github 快速 Fork 所有 wiki 和 release资源
 
 - 把.github复制到本人fork的仓库 并push -> 项目页顶部 -> Action -> I understand -> Fork Release and Wiki -> run workflow
 
+# 可选设置
+
+#### 1.定时
+ fork-sync.yml文件 把schedule处注释打开
+
+#### 2.只更新最新release
+fork-sync.yml文件 设置RELEASE_LIMIT
 
 # 常见错误
 
