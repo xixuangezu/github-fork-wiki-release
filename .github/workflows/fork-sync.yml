@@ -5,7 +5,9 @@ on:
   # schedule: #定时1.5小时触发一次
   # - cron: "0 0,3,6,9,12,15,18,21 * * *"    # 00:00/03:00/…/21:00 UTC
   # - cron: "30 1,4,7,10,13,16,19,22 * * *"  # 01:30/04:30/…/22:30 UTC
-
+permissions:
+  contents: write   # 创建 release / 推 tag 需要
+  issues: write     # 如果脚本还会发 issue/通知
 env:
   RELEASE_LIMIT: 1000 # release同步的数量 最新的几个
   FORK_REPO: ${{ github.repository }}
